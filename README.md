@@ -34,7 +34,11 @@ You do not have permission to view this directory or page.
 
 ### The web app
 
-It is a webapp in east us, runtime of Node 14 on Windows.
+It is a webapp in east us, runtime of Node 14 on Windows. The exported template shows:
+
+```
+"nodeVersion": "~14",
+```
 
 ### Files deployed
 
