@@ -32,6 +32,10 @@ When you visit the app it will say:
 You do not have permission to view this directory or page.
 ```
 
+### The web app
+
+It is a webapp in east us, runtime of Node 14 on Windows.
+
 ### Files deployed
 
 This project has a github action that deploys to the above webapp. You can see the way it works in [.github/workflows/build-and-deploy.yml](.github/workflows/build-and-deploy.yml).
