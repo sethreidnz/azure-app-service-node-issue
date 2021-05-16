@@ -1,0 +1,35 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: "14.x"
+  AZURE_APP_NAME: azure-web-app-issue
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Deploy to Web App
+        if: success() && github.event_name != 'pull_request'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{env.AZURE_APP_NAME}}
+          slot-name: "production"
+          publish-profile: ${{ secrets.App_Service_Publish_Profile }}
+          package: ${{ github.workspace }}
