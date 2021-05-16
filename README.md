@@ -16,9 +16,13 @@ npm start
 
 Then visit the browser at [http://localhost:3000](http://localhost:3000) and you will see "Hello world" printed to the screen.
 
+## The application
+
+The app is super simple and is just one file `index.js` that will return hello world. There are no dependencies or anything complex. It has a start npm script in it's package.json that will run this file with node.
+
 ## Issue in Azure Web App
 
-The issue in Azure can be seen if you visit the webapp at the following URL:
+I have followed the [instructions in this guide](https://docs.microsoft.com/en-us/azure/app-service/configure-language-nodejs?pivots=platform-windows) and deployed the code. You can visit it here:
 
 [https://azure-webapp-node-issue.azurewebsites.net/](https://azure-webapp-node-issue.azurewebsites.net/)
 
